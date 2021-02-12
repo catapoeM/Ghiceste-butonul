@@ -21,9 +21,9 @@
 	    <div class="card">
 	    	<h3>Alege unul dintre butoanele urmatoare si afla daca ai ghicit sau nu</h3>
 		  <div class="card-body">
-		    <button type="button" class="btn btn-primary" onclick="return Buton1()"; >1</button>
-		    <button type="button" class="btn btn-secondary" onclick="return Buton2()"; >2</button>
-		    <button type="button" class="btn btn-danger" onclick="return Buton3()"; >3</button>
+		    <button type="button" class="btn btn-primary" id="1" onclick="reply_click(this.id)">1</button>
+		    <button type="button" class="btn btn-secondary" id="2" onclick="reply_click(this.id)" >2</button>
+		    <button type="button" class="btn btn-danger" id="3" onclick="reply_click(this.id)" >3</button>
 		  </div>
 	</div>
     <!-- Optional JavaScript; choose one of the two! -->
@@ -38,31 +38,10 @@
     -->
     <script type="text/javascript">
 	
-  	
-
-	function Buton1() {
+	function reply_click(clicked_id) {
 		var x = Math.floor((Math.random() * 3) + 1);
-		var p = 1;
-		if (x == p) {
-			alert("Felicitari! Ai ghicit");
-		}else {
-			alert("N-ai ghicit, numarul este " + x);
-		}
-	}
-	function Buton2() {
-		var x = Math.floor((Math.random() * 3) + 1);
-		var p = 1;
-		if (x == p) {
-			alert("Felicitari! Ai ghicit");
-		}else {
-			alert("N-ai ghicit, numarul este " + x);
-		}
-	}
-	function Buton3() {
-		var x = Math.floor((Math.random() * 3) + 1);
-		var p = 1;
-		if (x == p) {
-			alert("Felicitari! Ai ghicit");
+		if (x == clicked_id) {
+			alert("Felicitari! Ai ghicit butonul");
 		}else {
 			alert("N-ai ghicit, numarul este " + x);
 		}
